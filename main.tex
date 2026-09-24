@@ -19,45 +19,36 @@
 \include{TexFiles/firstpage}
 
 \setcounter{page}{1}
-%The dedication.
-\thispagestyle{plain}
+\pagestyle{plain}
+
+% The dedication.
 \include{TexFiles/dedication}
 
 %Abstract. Word length regulated by Chalmers/GU layouting guidelines.
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{Abstract}
-\thispagestyle{plain}
 \include{TexFiles/abstract}
 
 %Publication list. NOT the actual papers.
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{List of Publications}
-\thispagestyle{plain}
 \include{TexFiles/publicationsList}
 
 \ifx\authorshipStatementSection\undefined
 \else
 %Authorship statement
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{Authorship Statement}
-\thispagestyle{plain}
 \include{TexFiles/authorshipStatement}
 \fi
 
 
 
 %Acknowledgment
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{Acknowledgment}
-\thispagestyle{plain}
 \include{TexFiles/acknowledgment}
 
 %================================================================%
 % Table of contents, list of figures and tables
 %================================================================%
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage
-\thispagestyle{plain}
 \tableofcontents
 \newpage
 
@@ -65,20 +56,18 @@
 %\listoffigures
 %\listoftables
 
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage
 
 \mainmatter
+\pagestyle{fancy}
 
 %================================================================%
 % Chapters
 %================================================================%
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage
 \part{Summary}
 \label{part:summary}
 \newpage
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage
 \include{TexFiles/summary}
 
@@ -86,7 +75,6 @@
 %% Bibliography
 %%================================================================%
 \newpage
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage\addcontentsline{toc}{chapter}{Bibliography}
 
 % Choose citation styles depending on whether you want numeric/alphabetic in settings.tex
@@ -98,11 +86,9 @@
 %================================================================%
 %The actual papers that are included in the thesis
 \newpage
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage
 \part{Appended Papers}
 \newpage
-\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage
 
 \include{TexFiles/appendedPapers}
